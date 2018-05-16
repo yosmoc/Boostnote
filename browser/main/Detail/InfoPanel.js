@@ -19,8 +19,8 @@ class InfoPanel extends React.Component {
     return (
       <div className='infoPanel' styleName='control-infoButton-panel' style={{display: 'none'}}>
         <div>
-          <p styleName='modification-date'>{updatedAt}</p>
           <p styleName='modification-date-desc'>{i18n.__('MODIFICATION DATE')}</p>
+          <p styleName='modification-date'>{updatedAt}</p>
         </div>
 
         <hr />
@@ -29,12 +29,12 @@ class InfoPanel extends React.Component {
           ? ''
           : <div styleName='count-wrap'>
             <div styleName='count-number'>
-              <p styleName='infoPanel-defaul-count'>{wordCount}</p>
               <p styleName='infoPanel-sub-count'>{i18n.__('Words')}</p>
+              <p styleName='infoPanel-defaul-count'>{wordCount}</p>
             </div>
             <div styleName='count-number'>
-              <p styleName='infoPanel-defaul-count'>{letterCount}</p>
               <p styleName='infoPanel-sub-count'>{i18n.__('Letters')}</p>
+              <p styleName='infoPanel-defaul-count'>{letterCount}</p>
             </div>
           </div>
         }
@@ -45,26 +45,26 @@ class InfoPanel extends React.Component {
         }
 
         <div>
-          <p styleName='infoPanel-default'>{storageName}</p>
           <p styleName='infoPanel-sub'>{i18n.__('STORAGE')}</p>
+          <p styleName='infoPanel-default'>{storageName}</p>
         </div>
 
         <div>
-          <p styleName='infoPanel-default'>{folderName}</p>
           <p styleName='infoPanel-sub'>{i18n.__('FOLDER')}</p>
+          <p styleName='infoPanel-default'>{folderName}</p>
         </div>
 
         <div>
-          <p styleName='infoPanel-default'>{createdAt}</p>
           <p styleName='infoPanel-sub'>{i18n.__('CREATION DATE')}</p>
+          <p styleName='infoPanel-default'>{createdAt}</p>
         </div>
 
         <div>
+          <p styleName='infoPanel-sub'>{i18n.__('NOTE LINK')}</p>
           <input styleName='infoPanel-noteLink' ref='noteLink' value={noteLink} onClick={(e) => { e.target.select() }} />
           <button onClick={() => this.copyNoteLink()} styleName='infoPanel-copyButton'>
             <i className='fa fa-clipboard' />
           </button>
-          <p styleName='infoPanel-sub'>{i18n.__('NOTE LINK')}</p>
         </div>
 
         <hr />
